@@ -1,0 +1,103 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-5400583567114467854
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: df9bdc4129dd9f64c97141f9b4995906, type: 3}
+  m_Name: RootNode
+  m_EditorClassIdentifier: 
+  nodeName: 
+  nodePosition: {x: 0, y: 0}
+  breakpoint: 0
+  child: {fileID: 8277073551262865174}
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7f7a65a64ca895842abc0e2c774d054e, type: 3}
+  m_Name: CubeTree
+  m_EditorClassIdentifier: 
+  blackboard: {fileID: 0}
+  updateMode: 0
+  tickRate: 30
+  rootNode: {fileID: -5400583567114467854}
+  nodes:
+  - {fileID: -5400583567114467854}
+  - {fileID: 8277073551262865174}
+  - {fileID: 6563637554998560936}
+  - {fileID: 3714849339088523081}
+  groups: []
+  notes: []
+  selectedNode: {fileID: 3714849339088523081}
+--- !u!114 &3714849339088523081
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a6f646c6a1eb19a4e960626068ae3aea, type: 3}
+  m_Name: CrossFadeTask
+  m_EditorClassIdentifier: 
+  nodeName: Cross Fade
+  nodePosition: {x: 226.07996, y: 503.6667}
+  breakpoint: 0
+  decorators: []
+  services: []
+  ignoreAbortSelf: 0
+  animation: Idle_A
+  normalizedTransitionDuration: 0
+  layer: -1
+  normalizedTimeOffset: 0
+  normalizedTransitionTime: 0
+--- !u!114 &6563637554998560936
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 20ecbd642284b504ca1789fb521bbe87, type: 3}
+  m_Name: SequencerNode
+  m_EditorClassIdentifier: 
+  nodeName: Sequencer
+  nodePosition: {x: 313.99997, y: 331.6667}
+  breakpoint: 0
+  decorators: []
+  services: []
+  children:
+  - {fileID: 3714849339088523081}
+--- !u!114 &8277073551262865174
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fa1770628119ce54980deb844516c178, type: 3}
+  m_Name: SelectorNode
+  m_EditorClassIdentifier: 
+  nodeName: Selector
+  nodePosition: {x: -14, y: 133.66669}
+  breakpoint: 0
+  decorators: []
+  services: []
+  children:
+  - {fileID: 6563637554998560936}
